@@ -1,0 +1,41 @@
+server:
+  port: 8182
+# ?????? ????????? PostgreSQL
+#spring.datasource.url=jdbc:postgresql://localhost:5432/telegrambot
+#spring.datasource.username=teleuser
+#spring.datasource.password=199wdv@c9sk!f
+#spring.datasource.driver-class-name=org.postgresql.Driver
+# ????? ????????? H2
+spring:
+  datasource:
+    url: jdbc:h2:mem:telebotDB
+    username: teleuser
+    password: 199wdv@c9sk!f
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+telegram:
+  bot:
+    token: ${BOT_TOKEN}
+    username: ${BOT_NAME}
+    group:
+      name: Жк Времена года Кемерово
+      link: https://t.me/vremena_goda_kemerovo
+      chatId: -1001585994311
+
+logging:
+  level:
+    root: INFO
