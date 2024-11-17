@@ -8,9 +8,9 @@ server:
 # ????? ????????? H2
 spring:
   datasource:
-    url: jdbc:h2:mem:telebotDB
-    username: teleuser
-    password: 199wdv@c9sk!f
+    url: jdbc:h2:file:./data/telebotDB;AUTO_SERVER=TRUE #jdbc:h2:mem:telebotDB
+    username: ${DATABASE_USERNAME:teleuser}
+    password: ${DATABASE_PASSWORD:199wdv@c9sk!f}
     driver-class-name: org.h2.Driver
   h2:
     console:

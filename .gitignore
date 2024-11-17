@@ -5,9 +5,13 @@ target/
 
 ### IntelliJ IDEA ###
 .idea/
+/.idea/
 *.iws
 *.iml
 *.ipr
+
+### Data ###
+/data/
 
 ### Eclipse ###
 .apt_generated
