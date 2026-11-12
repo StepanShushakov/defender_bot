@@ -13,7 +13,7 @@ GROUP_LINK = "https://t.me/vremena_goda_kemerovo"
 [[d1_databases]]
 binding = "DB"
 database_name = "defender-bot"
-database_id = "00000000-0000-0000-0000-000000000000" # заменить на id из `npx wrangler d1 create defender-bot`
+database_id = "5741fb1e-9ade-4d67-b45b-c5693670348e"
 
 [observability]
 enabled = true
