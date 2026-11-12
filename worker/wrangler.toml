@@ -1,0 +1,19 @@
+name = "defender-bot"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+
+# Секреты задаются не здесь, а командами:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put WEBHOOK_SECRET
+[vars]
+GROUP_CHAT_ID = "-1001585994311"
+GROUP_NAME = "Жк Времена года Кемерово"
+GROUP_LINK = "https://t.me/vremena_goda_kemerovo"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "defender-bot"
+database_id = "00000000-0000-0000-0000-000000000000" # заменить на id из `npx wrangler d1 create defender-bot`
+
+[observability]
+enabled = true
